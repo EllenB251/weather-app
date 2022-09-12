@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <br />
+    <div class="container">
+      <form id="search-form">
+        <div class="search-engine">
+          <label for="exampleSearch">Select Location</label>
+          <input
+            type="search"
+            class="search-engine"
+            id="city-input"
+            aria-describedby="searchHelp"
+            placeholder="Search Here"
+          />
+          <button type="submit" label="submit">Submit</button>
+          <button type="button" id="btn-link" class="btn btn-link">Current Location</button>
+        </div>
+      </form>
+      <br />
+      <div class="paralellogram">
+        <div class="today">
+          <h1 id="city">Perth, WA</h1>
+          <div class="row">
+            <h3 id="day" class="col-6">Tue 09/08/22</h3>
+            <h3 id="temperature" class="col"><strong>
+              <span class="digits">13</span><span class="units"><a href:"#" id="celsius-link">°C</a> | <a href:"#" id="fahrenheit-link">°F</a></span></strong>
+            </h3>
+            <h5 class="col-2">🌧</h5>
+            <h3 id="time" class="col">10:35AM</h3>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="five-days">
+        <h2>Five Day Forecast</h2>
+      </div>
+      <br />
+      <div>
+        <div class="row row-cols-10">
+          <div class="col">
+            <div class="card-deck">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-title">
+                    <h5 class="card-title-1">🌥</h5>
+                  </div>
+                  <p class="card-text">Wed<br />17°C/7°C</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card-deck">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-title">
+                    <h5 class="card-title-2">🌥</h5>
+                  </div>
+                  <p class="card-text">Thu<br />19°C/8°C</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card-deck">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-title">
+                    <h5 class="card-title-3">☀</h5>
+                  </div>
+                  <p class="card-text">Fri<br />21°C/8°C</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card-deck">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-title">
+                    <h5 class="card-title-4">🌧</h5>
+                  </div>
+                  <p class="card-text">Sat<br />18°C/9°C</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card-deck">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-title">
+                    <h5 class="card-title-5">🌧</h5>
+                  </div>
+                  <p class="card-text">Sun<br />21°C/9°C</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <script src="src/index.js"></script>
+  </body>
+</html>

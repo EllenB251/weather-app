@@ -1,0 +1,102 @@
+body {
+  font-family: "Lato";
+}
+
+h1 {
+  color: #3a84ce;
+  text-align: center;
+  font-weight: 400;
+  -webkit-transform: skew(40deg);
+}
+h2 {
+  font-size: 20px;
+  text-align: center;
+}
+
+h5 {
+  font-size: 50px;
+}
+p {
+  font-size: 20px;
+}
+
+.container {
+  border: 3px solid grey;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 5%;
+  max-width: max-content;
+  position: relative;
+}
+
+.paralellogram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.today {
+  border: 3px solid #3a84ce;
+  color: #41a5f5;
+  display: block;
+  margin: 0 0 0 20px;
+  padding: 0 3px 0 3px;
+  max-width: 500px;
+  -webkit-transform: skew(-40deg);
+}
+
+.today .row {
+  margin: 0 50px;
+  -webkit-transform: skew(40deg);
+  text-align: left;
+}
+
+.units {
+  font-size: 14px;
+  font-display: block;
+  vertical-align: text-top;
+}
+
+.col-2 {
+  font-size: 60px;
+}
+
+.five-days {
+  border: 3px solid green;
+  color: #008000;
+}
+
+.card-deck {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-title {
+  text-align: center;
+  font-size: 50px;
+  border: 3px solid #ab47bc;
+  border-radius: 50%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.card-body {
+  border: 3px solid #ab47bc;
+  color: #ab47bc;
+  max-width: max-content;
+}
+
+.search-engine {
+  border: 3px solid red;
+  color: red;
+  max-width: fit-content;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #c1c1c1;
+}
