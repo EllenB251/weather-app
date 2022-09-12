@@ -18,7 +18,6 @@ function formatDate(dateElement) {
   let dayIndex = currentTime.getDay();
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let day = days[dayIndex];
-  let monthIndex = currentTime.getMonth();
   let months = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
   let currentYear = currentTime.getFullYear();
   let currentMonth = months[currentTime.getMonth()];
