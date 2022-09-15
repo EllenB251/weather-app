@@ -32,24 +32,36 @@
             id="city-input"
             aria-describedby="searchHelp"
             placeholder="Search Here"
-             autofocus="on"
+            autofocus="on"
             autocomplete="off"
           />
           <button type="submit" label="submit">Submit</button>
-          <button type="button" id="btn-link" class="btn btn-link">Current Location</button>
+          <button type="button" id="btn-link" class="btn btn-link">
+            Current Location
+          </button>
         </div>
       </form>
       <br />
       <div class="paralellogram">
         <div class="today">
-          <h1 id="city">Perth, WA</h1>
+          <h1 id="city"></h1>
           <div class="row">
-            <h3 id="day" class="col-6">Tue 09/08/22</h3>
-            <h3 id="temperature" class="col"><strong>
-              <span class="digits">13</span><span class="units"><a href:"#" id="celsius-link">°C</a> | <a href:"#" id="fahrenheit-link">°F</a></span></strong>
+            <h3 id="day" class="col-5"></h3>
+            <h3 id="temperature" class="col">
+              <strong>
+                <span class="digits"></span
+                ><span class="units"
+                  ><a href="#" id="celsius-link" class="active">°C</a> |
+                  <a href="#" id="fahrenheit-link">°F</a></span
+                ></strong
+              >
             </h3>
-            <h5 class="col-2">🌧</h5>
-            <h3 id="time" class="col">10:35AM</h3>
+            <img src="" alt="Clear" id="emoji" /><span
+              ><h4 id="description"></h4
+            ></span>
+            <h3 id="time" class="col"></h3>
+            <h4 class="col">Humidity: <span id="humidity"></span>%</h4>
+            <h4 class="col">Wind: <span id="wind"></span>km/h</h4>
           </div>
         </div>
       </div>
@@ -123,10 +135,13 @@
         </div>
       </div>
     </div>
+    <span class="final-link">
+      <a href="https://github.com/EllenB251/weather-app" target="_blank"
+        >Open-source code</a
+      >
+      by Ellen Brookes</span
+    >
     <br />
     <script src="src/index.js"></script>
   </body>
 </html>
-
-
-//https://github.com/EllenB251/weather-app

@@ -13,11 +13,22 @@ h2 {
   text-align: center;
 }
 
-h5 {
-  font-size: 50px;
+h4 {
+  text-align: center;
 }
+
 p {
   font-size: 20px;
+}
+
+#temperature {
+  padding-top: 15px;
+}
+
+#description {
+  font-size: 20px;
+  padding-top: 25px;
+  padding-left: 4px;
 }
 
 .container {
@@ -25,7 +36,7 @@ p {
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 10px;
-  padding-bottom: 5%;
+  padding-bottom: 3%;
   max-width: max-content;
   position: relative;
 }
@@ -54,12 +65,24 @@ p {
 
 .units {
   font-size: 14px;
-  font-display: block;
   vertical-align: text-top;
 }
 
-.col-2 {
-  font-size: 60px;
+.active {
+  color: black;
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
+}
+
+#description {
+  max-width: 5px;
+}
+
+#description:first-letter {
+  text-transform: capitalize;
 }
 
 .five-days {
@@ -99,4 +122,10 @@ p {
 button:hover {
   cursor: pointer;
   background-color: #c1c1c1;
+}
+
+.final-link {
+  text-align: justify;
+  padding-left: 275px;
+  position: relative;
 }

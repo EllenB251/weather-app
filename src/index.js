@@ -30,10 +30,22 @@ let dateElement = document.querySelector("#day");
 dateElement.innerHTML = formatDate(currentTime);
 
 function displayWeatherCondition(response) {
+  let emojiElement = document.querySelector("#emoji");
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector(".digits").innerHTML = Math.round(
     response.data.main.temp
   );
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].description;
+  emojiElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  celsiusTemperature = response.data.main.temp;
 }
 
 function searchCity(city) {
@@ -61,8 +73,11 @@ function getCurrentLocation(event) {
 
 function convertToFahrenheit(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 66 + "°F";
+  fahrenheitLink.classList.add("active");
+  celsiusLink.classList.remove("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector(".digits");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
@@ -70,9 +85,13 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 function convertToCelsius(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 19 + "°C";
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector(".digits");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
+
+let celsiusTemperature = null;
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
@@ -82,3 +101,5 @@ searchForm.addEventListener("submit", handleSubmit);
 
 let currentLocationButton = document.querySelector("#btn-link");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+searchCity("Perth");
