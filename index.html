@@ -32,8 +32,6 @@
             id="city-input"
             aria-describedby="searchHelp"
             placeholder="Search Here"
-            autofocus="on"
-            autocomplete="off"
           />
           <button type="submit" label="submit">Submit</button>
           <button type="button" id="btn-link" class="btn btn-link">
@@ -49,12 +47,8 @@
             <h3 id="day" class="col-5"></h3>
             <h3 id="temperature" class="col">
               <strong>
-                <span class="digits"></span
-                ><span class="units"
-                  ><a href="#" id="celsius-link" class="active">°C</a> |
-                  <a href="#" id="fahrenheit-link">°F</a></span
-                ></strong
-              >
+                <span class="digits"></span><span class="units"></span></strong
+              ><span class="units">°C </span>
             </h3>
             <img src="" alt="Clear" id="emoji" /><span
               ><h4 id="description"></h4
@@ -70,70 +64,7 @@
         <h2>Five Day Forecast</h2>
       </div>
       <br />
-      <div>
-        <div class="row row-cols-10">
-          <div class="col">
-            <div class="card-deck">
-              <div class="card">
-                <div class="card-body">
-                  <div class="card-title">
-                    <h5 class="card-title-1">🌥</h5>
-                  </div>
-                  <p class="card-text">Wed<br />17°C/7°C</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card-deck">
-              <div class="card">
-                <div class="card-body">
-                  <div class="card-title">
-                    <h5 class="card-title-2">🌥</h5>
-                  </div>
-                  <p class="card-text">Thu<br />19°C/8°C</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card-deck">
-              <div class="card">
-                <div class="card-body">
-                  <div class="card-title">
-                    <h5 class="card-title-3">☀</h5>
-                  </div>
-                  <p class="card-text">Fri<br />21°C/8°C</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card-deck">
-              <div class="card">
-                <div class="card-body">
-                  <div class="card-title">
-                    <h5 class="card-title-4">🌧</h5>
-                  </div>
-                  <p class="card-text">Sat<br />18°C/9°C</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card-deck">
-              <div class="card">
-                <div class="card-body">
-                  <div class="card-title">
-                    <h5 class="card-title-5">🌧</h5>
-                  </div>
-                  <p class="card-text">Sun<br />21°C/9°C</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div id="forecast"></div>
     </div>
     <span class="final-link">
       <a href="https://github.com/EllenB251/weather-app" target="_blank"

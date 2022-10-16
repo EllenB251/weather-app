@@ -37,14 +37,15 @@ p {
   padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 3%;
-  max-width: max-content;
-  position: relative;
+  max-width: 800px;
 }
 
 .paralellogram {
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: fit-content;
+  padding-left: 110px;
 }
 
 .today {
@@ -63,18 +64,13 @@ p {
   text-align: left;
 }
 
+.digits {
+  padding-left: 30px;
+}
+
 .units {
   font-size: 14px;
   vertical-align: text-top;
-}
-
-.active {
-  color: black;
-  cursor: default;
-}
-
-.active:hover {
-  text-decoration: none;
 }
 
 #description {
@@ -100,7 +96,6 @@ p {
 
 .card-title {
   text-align: center;
-  font-size: 50px;
   border: 3px solid #ab47bc;
   border-radius: 50%;
   padding-top: 5px;
@@ -111,6 +106,10 @@ p {
   border: 3px solid #ab47bc;
   color: #ab47bc;
   max-width: max-content;
+}
+
+.max-temp {
+  font-weight: bolder;
 }
 
 .search-engine {
